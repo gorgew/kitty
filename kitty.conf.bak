@@ -8,8 +8,24 @@ map ctrl+k kitten pass_keys.py neighboring_window top    ctrl+k
 map ctrl+h kitten pass_keys.py neighboring_window left   ctrl+h
 map ctrl+l kitten pass_keys.py neighboring_window right  ctrl+l
 
-map ctrl+| launch --cwd=current
-map f2 launch --cwd=current --type=tab
+# map ctrl+| launch --cwd=current
+# map f2 launch --cwd=current --type=tab
+
+map ctrl+shift+up move_window up
+map ctrl+shift+left move_window left
+map ctrl+shift+right move_window right
+map ctrl+shift+down move_window dowN
+
+map shift+up resize_window taller
+map shift+left resize_window narroWER
+map shift+right resize_window wider
+map shift+down resize_window shorter 
+
+map ctrl+- launch --cwd=current --location=hsplit
+map ctrl+\ launch --cwd=current --location=vsplit
+map ctrl+w close_window
+
+enabled_layouts splits:split_axis=horizontal
 
 allow_remote_control yes
 single_instance yes
@@ -21,8 +37,9 @@ listen_on unix:/tmp/mykitty
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-font_family     FantasqueSansMono Nerd Font Mono 
-# bold_font        auto
+# font_family     FantasqueSansMono Nerd Font Mono 
+font_family    CodeNewRoman Nerd Font Mono 
+# bold_font        autCodeNewRoman Nerd Font Monoo
 # italic_font      auto
 # bold_italic_font auto
 
@@ -39,7 +56,8 @@ font_family     FantasqueSansMono Nerd Font Mono
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 21.0
+# font_size 21.0
+font_size 18.0
 
 #: Font size (in pts)
 #
@@ -766,7 +784,7 @@ font_size 21.0
 #: suffix of "c" on the width/height values to have them interpreted
 #: as number of cells instead of pixels.
 
-enabled_layouts tall:bias=50;full_size=1;mirrored=false 
+# enabled_layouts tall:bias=50;full_size=1;mirrored=false 
 
 #: The enabled window layouts. A comma separated list of layout names.
 #: The special value all means all layouts. The first listed layout
@@ -2405,3 +2423,4 @@ enabled_layouts tall:bias=50;full_size=1;mirrored=false
 #: }}}
 
 #: }}}
+
